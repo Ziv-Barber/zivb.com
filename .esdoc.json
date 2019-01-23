@@ -1,0 +1,75 @@
+{
+  "source": ".",
+  "destination": "./docs",
+  "includes": [
+    "^src(\\\\|\\/).*\\.(js|jsx)$"
+  ],
+  "excludes": [
+    "tests(\\\\|\\/).*(spec|Spec|test|Test)\\.(js|jsx)$"
+  ],
+  "plugins": [
+    {
+      "name": "esdoc-standard-plugin"
+    },
+    {
+      "name": "esdoc-flow-type-plugin",
+      "option": {
+        "enable": true
+      }
+    },
+    {
+      "name": "esdoc-lint-plugin",
+      "option": {
+        "enable": true
+      }
+    },
+    {
+      "name": "esdoc-integrate-manual-plugin",
+      "option": {
+        "index": "./internals/manual/index.md",
+        "globalIndex": true,
+        "asset": "./internals/manual/asset",
+        "files": [
+          "./CHANGELOG"
+        ]
+      }
+    },
+    {
+      "name": "esdoc-brand-plugin",
+      "option": {
+        "description": "Ziv Barber website",
+        "repository": "https://github.com/Ziv-Barber/zivb.com",
+        "site": "https://github.com/Ziv-Barber/zivb.com",
+        "image": "./logo.svg"
+      }
+    },
+    {
+      "name": "esdoc-ecmascript-proposal-plugin",
+      "option": {
+        "all": true
+      }
+    },
+    {
+      "name": "esdoc-react-plugin"
+    },
+    {
+      "name": "esdoc-jsx-plugin"
+    },
+    {
+      "name": "esdoc-integrate-test-plugin",
+      "option": {
+        "source": ".",
+        "interfaces": [
+          "describe",
+          "it",
+          "context",
+          "suite",
+          "test"
+        ],
+        "includes": [
+          "^src(\\\\|\\/).*(spec|Spec|test|Test)\\.(js|jsx)$"
+        ]
+      }
+    }
+  ]
+}
