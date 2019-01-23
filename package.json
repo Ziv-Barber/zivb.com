@@ -1,7 +1,7 @@
 {
   "name": "zivb.com",
   "version": "0.1.0",
-  "homepage": "https://Ziv-Barber.github.io/zivb.com",
+  "homepage": "https://zivb.com/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.8.3",
